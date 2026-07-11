@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-tools"
+version = "0.1.0"
+description = "WSLg microphone recording and OpenAI Whisper transcription"
+requires-python = ">=3.12"
+dependencies = [
+    "openai",
+    "python-dotenv",
+    "soundfile",
+]
+
+[project.scripts]
+voice-to-text = "voice_tools.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

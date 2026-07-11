@@ -1,0 +1,42 @@
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+*.so
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Audio files
+*.wav
+
+# Logs
+*.log
+
+# uv
+.python-version
